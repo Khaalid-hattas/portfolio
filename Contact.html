@@ -131,25 +131,37 @@
         <div class="col-md-7">
           <div class="card shadow-sm border-0">
             <div class="card-body">
-              <form>
+              <form action="https://formspree.io/f/xlgvqopk" method="POST">
+
                 <div class="mb-3">
                   <label for="name" class="form-label">Full Name</label>
-                  <input type="text" class="form-control" id="name" placeholder="Enter your name" required>
+                  <input type="text" class="form-control" id="name" name="name" placeholder="Enter your name" required>
                 </div>
+
                 <div class="mb-3">
                   <label for="email" class="form-label">Email Address</label>
-                  <input type="email" class="form-control" id="email" placeholder="Enter your email" required>
+                  <input type="email" class="form-control" id="email" name="email" placeholder="Enter your email"
+                    required>
                 </div>
+
                 <div class="mb-3">
                   <label for="subject" class="form-label">Subject</label>
-                  <input type="text" class="form-control" id="subject" placeholder="Enter subject">
+                  <input type="text" class="form-control" id="subject" name="subject" placeholder="Enter subject">
                 </div>
+
                 <div class="mb-3">
                   <label for="message" class="form-label">Message</label>
-                  <textarea class="form-control" id="message" rows="5" placeholder="Type your message..."
+                  <textarea class="form-control" id="message" name="message" rows="5" placeholder="Type your message..."
                     required></textarea>
                 </div>
-                <button type="submit" class="btn btn-primary w-100">Send Message</button>
+
+                <!-- Optional: redirect after submit -->
+                <input type="hidden" name="_next" value="https://khaalid-hattas.github.io/thankyou.html">
+
+                <button type="submit" class="btn btn-primary w-100">
+                  Send Message
+                </button>
+
               </form>
             </div>
           </div>
